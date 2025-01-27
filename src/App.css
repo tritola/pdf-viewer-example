@@ -1,0 +1,250 @@
+.split-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: col-resize;
+}
+
+.gutter:hover {
+    background-color: #ddd;
+}
+
+.left-pane {
+    position: relative;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    overflow-y: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+.right-pane {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make the PDF viewer fill the right pane */
+.right-pane > div {
+    flex: 1;
+    height: 100%;
+}
+
+/* Document structure styling */
+h1 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.summary-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section {
+    margin-bottom: 12px;
+}
+
+.section .section {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.section-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+.section-box:hover {
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.section-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.expand-arrow {
+    color: #95a5a6;
+    font-size: 0.8em;
+}
+
+.page-button {
+    background-color: #e8f4fc;
+    border: 1px solid #bde3f9;
+    color: #2980b9;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.page-button:hover {
+    background-color: #d4ebf9;
+    border-color: #93d3f9;
+}
+
+.section-summary {
+    margin: 0;
+    color: #5a6c7d;
+    line-height: 1.5;
+}
+
+.section-detailed-summary {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.section-detailed-summary p {
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.full-text-toggle {
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 4px 0;
+}
+
+.full-text-toggle:hover {
+    text-decoration: underline;
+}
+
+.full-text {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.full-text p {
+    margin: 0;
+    white-space: pre-line;
+}
+
+/* Scrollbar styling */
+.left-pane::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-pane::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.left-pane::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.left-pane::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.menu-bar {
+    background-color: white;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: -20px -20px 0 -20px;
+}
+
+.menu-bar-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.menu-bar-button {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #2c3e50;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-bar-button:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    min-width: 150px;
+}
+
+.menu-item {
+    display: block;
+    padding: 8px 16px;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.menu-item:hover {
+    background-color: #f8f9fa;
+}
+
+.content-area {
+    padding-top: 20px;
+} 
